@@ -1,6 +1,8 @@
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
-  
+  let pge = 'https://anapioficeandfire.com/api/books';
+  fetch(pge)
+  .then((response) => {return response.json();})
+  .then((books) => {renderBooks(books);});
 }
 
 function renderBooks(books) {
